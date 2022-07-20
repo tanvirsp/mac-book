@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 62.5%;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.row {
+    width: 120rem;
+    margin: 0  auto;
+    padding: 75px ;
+
+   
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 40rem auto;
+}
+
+.product-details {
+    padding: 0 4.5rem;
+}
+
+.product {
+    width: 100%
+}
+
+.product-title {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin-top: 2.5rem
+}
+
+button {
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: .1rem solid gray;
+    margin: .2rem;
+}
+
+
+table {
+    width: 40%;
+    border-collapse: collapse;
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+}
+tr, td {
+    border-bottom: .1rem solid rgb(121, 121, 121);
+}
+
+.active {
+    background-color: black;
+    color: white;
+    border: .1rem solid black;
+}
+
+input {
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+input[type=text] {
+    border: 1px solid gray;
+   
+}
+
+input[type=submit] {
+    background-color: rgb(235, 19, 77);
+    color: white;
+    border: 1px solid  rgb(235, 19, 77);
+    padding: 10px 20px; 
+    cursor: pointer;
+
+}
+
+input[type=submit]:disabled {
+    background-color: rgb(241, 97, 136);
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #f7f7f7;
+
+
+}

@@ -54,7 +54,6 @@ aug21.addEventListener('click', function(){
 })
 
 
-
 //Delivery Charge Calculation
 
 function deliveryCharge(price, isFree){
@@ -73,7 +72,6 @@ function deliveryCharge(price, isFree){
 
 
 
-
 //Memory Size Calculation
 
 function memorySize(price, isActive){
@@ -88,7 +86,6 @@ function memorySize(price, isActive){
     }
 
 }
-
 
 
 
@@ -115,7 +112,6 @@ function storage(price, size){
 
 
 
-
 //Total Calculate
 function total(){
     const price = document.getElementById('price').innerText;
@@ -123,40 +119,53 @@ function total(){
     const storageCostPrice= document.getElementById('storage-cost').innerText;
     const deliveryChargePrice= document.getElementById('delivery-charge').innerText;
 
-    
     const totalPrice = parseInt(price) + parseInt(memoryCostPrice)+ parseInt(storageCostPrice) + parseInt(deliveryChargePrice);
     
- 
     const total = document.getElementById('total');
     total.innerText = totalPrice;
-    const netCost = document.getElementById('net-cost');
-    netCost.innerText = totalPrice;
+
+    document.getElementById('net-cost').innerText = totalPrice;
+    couponAmount();
+
     
 }
+
+
+
+
+
+//Coupon Calulation
+let coupon = 0;
+function couponAmount(){
+    const total = document.getElementById('total').innerText;
+    coupon = parseInt(total) * .10 ;
+}
+
+couponAmount()
+
+
 
 
 const submit = document.getElementById('submit');
 submit.addEventListener('click', function(){
     const inputText = document.getElementById('text');
-
-
+    
     if(inputText.value === "EID"){
-        const netCost = document.getElementById('net-cost');
-        netCostValue = netCost.innerText;
-        const coupon = parseInt(netCostValue) * .10;
-
-        const newPrice = parseInt(netCostValue) - coupon;
-        netCost.innerText = newPrice;
-
+        netPrice()
         inputText.value = ''
-        
 
     }else{
         alert("Coupon is not Valid");
         inputText.value = ''
-    }
-})
+    };
+   
+});
 
 
 
-
+//net-price calculate
+function netPrice(){
+    const total = document.getElementById('total').innerText;
+    const netAmount = parseInt(total) - coupon;
+    document.getElementById('net-cost').innerText = netAmount;
+}

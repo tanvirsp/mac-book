@@ -1,3 +1,4 @@
 # mac-book
-this project is simple Java Script project
+This project is simple Java Script project
+# Coupon "EID" to get 10% discount
 
